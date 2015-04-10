@@ -1,0 +1,4 @@
+Solved using clustalw2 website.
+
+http://www.ebi.ac.uk/Tools/msa/clustalw2/
+

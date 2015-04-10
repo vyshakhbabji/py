@@ -1,0 +1,17 @@
+dat = open('/home/sulab/Downloads/rosalind_eval.txt').read().split('\n')
+
+number = int(dat[0])
+string = dat[1]
+values = [float(x) for x in dat[2].split(" ")]
+num_GC = float(sum( [i == "C" or i == "G" for i in string] ))
+
+print num_GC
+
+print len(string)
+
+num_AG = len(string) - num_GC
+
+for gc_content in values:
+
+	prob = float(gc_content * num_GC * (1-gc_content) * num_AG)
+	print( num_GC * prob + num_AG * (1-prob) )
